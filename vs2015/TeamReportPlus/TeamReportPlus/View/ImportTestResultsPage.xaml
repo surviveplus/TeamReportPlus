@@ -1,0 +1,55 @@
+﻿<Page x:Class="TeamReportPlus.View.ImportTestResultsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TeamReportPlus.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="ImportTestResultsPage"
+      Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0 0 0 4">
+            <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="BackButton" Click="BackButton_Click">&lt;</Button>
+            <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="PasteButton" Click="PasteButton_Click">Paste Results</Button>
+            <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="SaveButton" Click="SaveButton_Click">Save to Server</Button>
+        </StackPanel>
+        <Grid Grid.Row="1" Margin="0 0 0 4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Foreground="{DynamicResource VsBrush.WindowText}" >Attachments Folder:</Label>
+            <TextBox Grid.Column="1" x:Name="imagesFolderBox" VerticalContentAlignment="Center"></TextBox>
+        </Grid>
+        <ProgressBar Grid.Row="1" x:Name="Progress" Height="4" VerticalAlignment="Top" IsIndeterminate="True" Margin="0,28,0,0" Visibility="Hidden"/>
+        <ListView Grid.Row="2"   x:Name="ResultListView" KeyDown="ResultListView_KeyDown" Grid.RowSpan="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Format Error" DisplayMemberBinding="{Binding HasFormatError}" />
+                    <GridViewColumn Header="Import Error" DisplayMemberBinding="{Binding HasImportError}" />
+                    <GridViewColumn Header="Import Result" DisplayMemberBinding="{Binding ImportResult}"/>
+
+                    <GridViewColumn Header="SuiteId" DisplayMemberBinding="{Binding SuiteId}" />
+                    <GridViewColumn Header="TestCaseId" DisplayMemberBinding="{Binding TestCaseId}" />
+                    <GridViewColumn Header="TestCaseTitle" DisplayMemberBinding="{Binding TestCaseTitle}"/>
+                    <GridViewColumn Header="StepNo" DisplayMemberBinding="{Binding StepNo}"/>
+                    <GridViewColumn Header="Action" DisplayMemberBinding="{Binding Action}"/>
+                    <GridViewColumn Header="ExpectedResult" DisplayMemberBinding="{Binding ExpectedResult}"/>
+                    <GridViewColumn Header="Outcome" DisplayMemberBinding="{Binding Outcome}"/>
+                    <GridViewColumn Header="Comment" DisplayMemberBinding="{Binding Comment}"/>
+                    <GridViewColumn Header="Attachments" DisplayMemberBinding="{Binding Attachments}"/>
+                    <GridViewColumn Header="DateStarted" DisplayMemberBinding="{Binding DateStarted}"/>
+                    <GridViewColumn Header="DateCompleted" DisplayMemberBinding="{Binding DateCompleted}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Page>

@@ -1,0 +1,49 @@
+﻿<Page x:Class="TeamReportPlus.View.PlansPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TeamReportPlus.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="600"
+      Title="PlansPage"
+             Background="{DynamicResource VsBrush.Window}"
+             Foreground="{DynamicResource VsBrush.WindowText}"
+      Loaded="Page_Loaded">
+    <Page.Resources>
+        <DataTemplate x:Key="FirstCell">
+            <StackPanel Orientation="Horizontal">
+                <CheckBox IsChecked="{Binding Path=IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}"/>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0 0 0 4">
+            <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="BackButton" Click="BackButton_Click">&lt;</Button>
+            <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="DownloadButton" Click="DownloadButton_Click">Download Test Results</Button>
+            <Label Foreground="{DynamicResource VsBrush.WindowText}" Margin="0 4 0 0">Attachments Prefix:</Label>
+            <TextBox x:Name="imagePrefix"  Width="80" Margin="0 0 16 0" VerticalContentAlignment="Center"></TextBox>
+            <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="ExportTestActionsButton" Click="ExportTestActionsButton_Click">Export Test Actions</Button>
+            <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="ImportTestResultsButton" Click="ImportTestResultsButton_Click">Import Test Results</Button>
+        </StackPanel>
+        <ProgressBar Grid.Row="0" x:Name="Progress" Height="4" VerticalAlignment="Top" IsIndeterminate="True" Margin="0,32,0,0" Visibility="Hidden"/>
+
+        <ListView Grid.Row="1" x:Name="ResultListView" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn CellTemplate="{StaticResource FirstCell}" Width="30"/>
+                    <GridViewColumn Header="ProjectName" DisplayMemberBinding="{Binding ProjectName}"/>
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Page>

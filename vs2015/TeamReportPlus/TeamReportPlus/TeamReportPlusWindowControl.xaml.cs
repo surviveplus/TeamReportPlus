@@ -21,20 +21,39 @@ namespace TeamReportPlus
         public TeamReportPlusWindowControl()
         {
             this.InitializeComponent();
-        }
+            serversPage.MainFrame = this.mainFrame;
+            System.AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
+        } // end constructor
 
-        /// <summary>
-        /// Handles click on the button by displaying a message box.
-        /// </summary>
-        /// <param name="sender">The event sender.</param>
-        /// <param name="e">The event args.</param>
-        [SuppressMessage("Microsoft.Globalization", "CA1300:SpecifyMessageBoxOptions", Justification = "Sample code")]
-        [SuppressMessage("StyleCop.CSharp.NamingRules", "SA1300:ElementMustBeginWithUpperCaseLetter", Justification = "Default event handler naming pattern")]
-        private void button1_Click(object sender, RoutedEventArgs e)
+
+        private View.ServersPage serversPage = new View.ServersPage();
+
+
+        private void MyToolWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(
-                string.Format(System.Globalization.CultureInfo.CurrentUICulture, "Invoked '{0}'", this.ToString()),
-                "TeamReportPlusWindow");
-        }
-    }
-}
+            if (this.mainFrame.Content == null)
+            {
+                this.mainFrame.Navigate(this.serversPage);
+            } // end if
+        } // end sub
+
+        private System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, System.ResolveEventArgs args)
+        {
+
+            var name = new System.Reflection.AssemblyName(args.Name);
+            var path = @"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer";
+
+            if (name.Name.EndsWith(".resources"))
+            {
+                path = System.IO.Path.Combine(path, "ja");
+
+            } // end if
+
+            var file = System.IO.Path.Combine(path, name.Name + ".dll");
+            var a = System.Reflection.Assembly.LoadFrom(file);
+            return a;
+
+        } // end function
+
+    } // end class
+} // end namespace

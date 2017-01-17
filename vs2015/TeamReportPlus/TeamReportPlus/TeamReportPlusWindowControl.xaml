@@ -7,11 +7,9 @@
              Foreground="{DynamicResource VsBrush.WindowText}"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300"
-             Name="MyToolWindow">
+             Name="MyToolWindow"
+             Loaded="MyToolWindow_Loaded">
     <Grid>
-        <StackPanel Orientation="Vertical">
-            <TextBlock Margin="10" HorizontalAlignment="Center">TeamReportPlusWindow</TextBlock>
-            <Button Content="Click me!" Click="button1_Click" Width="120" Height="80" Name="button1"/>
-        </StackPanel>
+        <Frame x:Name="mainFrame"  NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </UserControl>

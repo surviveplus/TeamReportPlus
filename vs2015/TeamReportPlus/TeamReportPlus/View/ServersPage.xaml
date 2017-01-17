@@ -1,0 +1,43 @@
+﻿<Page x:Class="TeamReportPlus.View.ServersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TeamReportPlus.View"
+      xmlns:ViewModels="clr-namespace:TeamReportPlus.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="ServersPage"
+      Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0 0 0 4">
+            <Button Padding="8 0 8 0" Margin="0 0 4 0" x:Name="ConnectButton" Click="ConnectButton_Click">Connect</Button>
+            <Button Padding="8 0 8 0" Margin="0 0 16 0" x:Name="ClearButton" Click="ClearButton_Click">Reset</Button>
+            <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="DownloadButton" Click="DownloadButton_Click">Test Plan</Button>
+        </StackPanel>
+        <TreeView x:Name="projectsTree" ItemsSource="{Binding Servers}" Grid.Row="1">
+            <TreeView.ItemContainerStyle>
+                <Style TargetType="{x:Type TreeViewItem}">
+                    <Setter Property="IsExpanded" Value="True"></Setter>
+                </Style>
+            </TreeView.ItemContainerStyle>
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate DataType="{x:Type ViewModels:ServerProjectTreeItem}" ItemsSource="{Binding Path=Children}">
+                    <Grid Margin="2,10,10,10"   >
+                        <CheckBox IsChecked="{Binding Path=IsChecked}" Visibility="{Binding CheckBoxVisibility}" >
+                            <TextBlock Text="{Binding Path=Text}" FontWeight="{Binding Path=FontWeight}"  />
+                        </CheckBox>
+                        <TextBlock Text="{Binding Path=Text}"  FontWeight="{Binding Path=FontWeight}" Visibility="{Binding TextVisibility}" />
+                    </Grid>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+
+        </TreeView>
+    </Grid>
+</Page>
