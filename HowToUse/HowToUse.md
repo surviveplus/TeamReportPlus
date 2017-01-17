@@ -2,7 +2,7 @@
 
 ## Instllation
 - Search and install in **Extensions and Update** of Visual Studio.
-- Download from [Marketplace](https://marketplace.visualstudio.com/items?itemName=SHIN-ICHIKOGA.TeamReportPlus) and double click TeamReportPlus.vsix file.
+- Otherwise download from [Marketplace](https://marketplace.visualstudio.com/items?itemName=SHIN-ICHIKOGA.TeamReportPlus) and double click TeamReportPlus.vsix file.
 
 ## Features
 ### Download Test Results and Attachments
@@ -42,7 +42,7 @@
 Save results (Passed or Failed) and attachments of each steps. 
 You must input **DateStarted** and **DateCompleted** fields, like "2017/01/17 13:24:23.847".
 1. Save attachments files in a single folder.
-1. Open Visual Studio.
+1. Open Visual Studio in online PC.
 1. Show TeamReportPlus window ( Click **VIEW > Other Windows > TeamReportPlus**  ).
 1. For the first time, Connection window is shown. Otherwise click **Connect** button.
 1. Sign in to VSTS or TFS.
