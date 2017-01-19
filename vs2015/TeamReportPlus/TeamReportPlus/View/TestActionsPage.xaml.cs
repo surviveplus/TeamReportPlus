@@ -127,7 +127,7 @@ namespace TeamReportPlus.View
                 text.Append("\t");
                 text.Append(item.TestCaseId.ToString());
                 text.Append("\t");
-                text.Append(item.TestCaseTitle);
+                text.Append(item.TestCaseTitle.EscapeMultilineForTsv());
                 text.Append("\t");
                 text.Append(item.StepNo);
                 text.Append("\t");

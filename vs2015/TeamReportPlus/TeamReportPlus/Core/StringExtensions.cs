@@ -22,6 +22,7 @@ namespace TeamReportPlus.Core
         public static string EscapeMultilineForTsv(this String me)
         {
             if (me == null) return null;
+            me = me.Replace("\t", "    ");
 
             if (me.Contains("\n")){
                 return "\"" + me.Replace("\"","\"\"").Replace("\r\n", "\n") + "\"";

@@ -110,13 +110,13 @@ namespace TeamReportPlus.View
             {
                 text.Append(item.TestCaseId.ToString());
                 text.Append("\t");
-                text.Append(item.TestCaseTitle);
+                text.Append(item.TestCaseTitle.EscapeMultilineForTsv());
                 text.Append("\t");
                 text.Append(item.TestRunId.ToString());
                 text.Append("\t");
                 text.Append(item.StepNo.ToString());
                 text.Append("\t");
-                text.Append(item.Outcome);
+                text.Append(item.Outcome.EscapeMultilineForTsv());
                 text.Append("\t");
                 text.Append(formatNoHtml(format, item.Action).EscapeMultilineForTsv());
                 text.Append("\t");
