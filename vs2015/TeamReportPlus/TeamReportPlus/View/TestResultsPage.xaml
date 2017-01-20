@@ -22,11 +22,11 @@
         
         <StackPanel Grid.Row="0" Orientation="Horizontal"  Grid.ColumnSpan="2">
             <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="BackButton" Click="BackButton_Click" >&lt;</Button>
-            <Button Padding="8 0 8 0" Margin="0 0 4 0" x:Name="SummaryButton" Click="SummaryButton_Click" >Summery</Button>
+            <Button Padding="8 0 8 0" Margin="0 0 4 0" x:Name="SummaryButton" Click="SummaryButton_Click" >Summary</Button>
             <Button Padding="8 0 8 0" Margin="0 0 4 0" x:Name="LeftRightButton" Click="LeftRightButton_Click" >Left-Right</Button>
             <Button Padding="8 0 8 0" Margin="0 0 16 0" x:Name="DetailButton" Click="DetailButton_Click" >Detail</Button>
 
-            <Button Padding="8 0 8 0" Margin="0 0 4 0" x:Name="CopySummaryButton" Click="CopySummaryButton_Click" >Copy Summery</Button>
+            <Button Padding="8 0 8 0" Margin="0 0 4 0" x:Name="CopySummaryButton" Click="CopySummaryButton_Click" >Copy Summary</Button>
             <Button Padding="8 0 8 0" Margin="0 0 4 0" x:Name="CopyDetailyButton" Click="CopyDetailyButton_Click" >Copy Detail</Button>
 
         </StackPanel>
