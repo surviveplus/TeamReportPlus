@@ -40,7 +40,7 @@ namespace TeamReportPlus.View
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            if (this.ResultListView.DataContext == null)
+            if (this.ResultListView.ItemsSource == null)
             {
                 this.Progress.Visibility = Visibility.Visible;
                 this.ResultListView.ItemsSource = this.results;

@@ -36,7 +36,7 @@ namespace TeamReportPlus.View
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            if (this.ResultListView.DataContext == null)
+            if (this.ResultListView.ItemsSource == null)
             {
                 this.Progress.Visibility = Visibility.Visible;
                 this.ResultListView.ItemsSource = this.actions;

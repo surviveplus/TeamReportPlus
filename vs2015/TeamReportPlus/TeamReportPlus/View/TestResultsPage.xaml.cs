@@ -30,6 +30,8 @@ namespace TeamReportPlus.View
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
+            this.summaryPage = null;
+            this.detailPage = null;
             this.MainFrame?.GoBack();
         }
 
@@ -66,12 +68,15 @@ namespace TeamReportPlus.View
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            this.summaryPage = new TestResultsSummaryPage { MainFrame = this.summaryFrame, Plans = this.Plans };
-            this.summaryFrame.Navigate(this.summaryPage);
+            if (this.summaryPage == null && this.detailPage == null)
+            {
+                this.summaryPage = new TestResultsSummaryPage { MainFrame = this.summaryFrame, Plans = this.Plans };
+                this.summaryFrame.Navigate(this.summaryPage);
 
-            this.detailPage = new TestResultsDetailPage { MainFrame = this.detailFrame, Plans = this.Plans };
-            this.detailFrame.Navigate(this.detailPage);
-        }
+                this.detailPage = new TestResultsDetailPage { MainFrame = this.detailFrame, Plans = this.Plans };
+                this.detailFrame.Navigate(this.detailPage);
+            } // end if
+        } // end sub
 
         private void CopySummaryButton_Click(object sender, RoutedEventArgs e)
         {

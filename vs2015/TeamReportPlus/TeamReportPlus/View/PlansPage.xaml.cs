@@ -43,7 +43,7 @@ namespace TeamReportPlus.View
         {
             this.imagePrefix.Text = Settings.Default.DownloadAttachmentFileNamePrefix;
 
-            if (this.ResultListView.DataContext == null)
+            if (this.ResultListView.ItemsSource == null)
             {
                 this.Progress.Visibility = Visibility.Visible;
                 this.ResultListView.ItemsSource = this.plans;
