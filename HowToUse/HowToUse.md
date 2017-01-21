@@ -17,8 +17,8 @@
 1. Click **Test Plan** button. Test Plans are  shown.
 1. Check Test Plans to download.
 1. Click **Download Test Results** button. 
-1. Please wait. Test Results are shown.  Attachments are saved in desktop folder and **File Explorer** is shown.
-1. Click **Copy Summery** button and **Copy Detaile** button. 
+1. Please wait. Test Results are shown.  Attachments are saved in desktop folder and **File Explorer** is shown. ( To cancel the download, go back to the previous page. )
+1. Click **Copy Summary** button and **Copy Detaile** button. 
 1. Paste the TSV text  to Notepad or Excel etc...
 
 ### Export Test Plan (Test Steps, Actions, Expected result) for offline editing
