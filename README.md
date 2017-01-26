@@ -1,3 +1,4 @@
+
 # TeamReportPlus
 ![TeamReportPlus](ResourceSources/TeamReportPlus-95.png) Visual Studio extension to create test results reports as deliverables from Visual Studio Team Services.
 
@@ -12,3 +13,8 @@ Developers wants to use modern task management system and reporting, like Visual
 
 ## Installation & How to use
 See [HowToUse.md](HowToUse/HowToUse.md)
+
+## Screen Captures
+![Test Results in VSTS](HowToUse/images/image2-ResultsVSTS.png)
+![Test Results in Visual Studio](HowToUse/images/image5-TestResultsVS.png)
+![Test Results in Excel](HowToUse/images/image6-TestResultsSammaryExcel.png)
