@@ -1,6 +1,6 @@
 # How to use TeamReportPlus
 
-## Instllation
+## Installation
 - Search and install in **Extensions and Update** of Visual Studio.
 - Otherwise download from [Marketplace](https://marketplace.visualstudio.com/items?itemName=SHIN-ICHIKOGA.TeamReportPlus) and double click TeamReportPlus.vsix file.
 
