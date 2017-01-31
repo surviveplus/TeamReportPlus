@@ -9,6 +9,9 @@
       Title="TestResultsPage"
       Loaded="Page_Loaded"
       >
+    <Page.Resources>
+        <ResourceDictionary Source="Styles.xaml" />
+    </Page.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>

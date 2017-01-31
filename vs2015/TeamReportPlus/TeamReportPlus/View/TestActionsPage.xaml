@@ -8,6 +8,9 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="TestActionsPage" 
       Loaded="Page_Loaded">
+    <Page.Resources>
+        <ResourceDictionary Source="Styles.xaml" />
+    </Page.Resources>
 
     <Grid>
         <Grid.RowDefinitions>

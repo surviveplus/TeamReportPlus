@@ -10,6 +10,11 @@
       Title="ServersPage"
       Loaded="Page_Loaded">
 
+    <Page.Resources>
+        <ResourceDictionary Source="Styles.xaml" />
+    </Page.Resources>
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="36"/>
@@ -25,15 +30,16 @@
             <TreeView.ItemContainerStyle>
                 <Style TargetType="{x:Type TreeViewItem}">
                     <Setter Property="IsExpanded" Value="True"></Setter>
+                    <Setter Property="Foreground" Value="{DynamicResource VsBrush.WindowText}" />
                 </Style>
             </TreeView.ItemContainerStyle>
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate DataType="{x:Type ViewModels:ServerProjectTreeItem}" ItemsSource="{Binding Path=Children}">
                     <Grid Margin="2,10,10,10"   >
                         <CheckBox IsChecked="{Binding Path=IsChecked}" Visibility="{Binding CheckBoxVisibility}" >
-                            <TextBlock Text="{Binding Path=Text}" FontWeight="{Binding Path=FontWeight}"  />
+                            <TextBlock Text="{Binding Path=Text}" FontWeight="{Binding Path=FontWeight}" Foreground="{DynamicResource VsBrush.WindowText}"  />
                         </CheckBox>
-                        <TextBlock Text="{Binding Path=Text}"  FontWeight="{Binding Path=FontWeight}" Visibility="{Binding TextVisibility}" />
+                        <TextBlock Text="{Binding Path=Text}"  FontWeight="{Binding Path=FontWeight}" Visibility="{Binding TextVisibility}" Foreground="{DynamicResource VsBrush.WindowText}" />
                     </Grid>
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>

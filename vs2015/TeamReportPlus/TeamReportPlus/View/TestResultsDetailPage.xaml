@@ -7,6 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="TestResultsDetailPage" Loaded="Page_Loaded">
+    <Page.Resources>
+        <ResourceDictionary Source="Styles.xaml" />
+    </Page.Resources>
 
     <Grid>
         <ProgressBar Grid.Row="0" x:Name="Progress" Height="4" VerticalAlignment="Top" IsIndeterminate="True"  Visibility="Hidden"/>

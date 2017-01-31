@@ -11,11 +11,18 @@
              Foreground="{DynamicResource VsBrush.WindowText}"
       Loaded="Page_Loaded">
     <Page.Resources>
-        <DataTemplate x:Key="FirstCell">
-            <StackPanel Orientation="Horizontal">
-                <CheckBox IsChecked="{Binding Path=IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}"/>
-            </StackPanel>
-        </DataTemplate>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+                <ResourceDictionary>
+                    <DataTemplate x:Key="FirstCell">
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox IsChecked="{Binding Path=IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}" Foreground="{DynamicResource VsBrush.WindowText}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -27,7 +34,7 @@
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0 0 0 4">
             <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="BackButton" Click="BackButton_Click">&lt;</Button>
             <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="DownloadButton" Click="DownloadButton_Click">Download Test Results</Button>
-            <Label Foreground="{DynamicResource VsBrush.WindowText}" Margin="0 4 0 0">Attachments Prefix:</Label>
+            <Label  Margin="0 4 0 0">Attachments Prefix:</Label>
             <TextBox x:Name="imagePrefix"  Width="80" Margin="0 0 16 0" VerticalContentAlignment="Center"></TextBox>
             <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="ExportTestActionsButton" Click="ExportTestActionsButton_Click">Export Test Actions</Button>
             <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="ImportTestResultsButton" Click="ImportTestResultsButton_Click">Import Test Results</Button>

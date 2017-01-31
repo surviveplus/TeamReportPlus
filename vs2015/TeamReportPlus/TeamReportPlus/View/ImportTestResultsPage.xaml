@@ -8,6 +8,9 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="ImportTestResultsPage"
       Loaded="Page_Loaded">
+    <Page.Resources>
+        <ResourceDictionary Source="Styles.xaml" />
+    </Page.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -25,7 +28,7 @@
                 <ColumnDefinition Width="130"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Foreground="{DynamicResource VsBrush.WindowText}" >Attachments Folder:</Label>
+            <Label Grid.Column="0" >Attachments Folder:</Label>
             <TextBox Grid.Column="1" x:Name="imagesFolderBox" VerticalContentAlignment="Center"></TextBox>
         </Grid>
         <ProgressBar Grid.Row="1" x:Name="Progress" Height="4" VerticalAlignment="Top" IsIndeterminate="True" Margin="0,28,0,0" Visibility="Hidden"/>
