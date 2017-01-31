@@ -25,6 +25,7 @@
             <Button Padding="8 0 8 0" Margin="0 0 4 0" x:Name="ConnectButton" Click="ConnectButton_Click">Connect</Button>
             <Button Padding="8 0 8 0" Margin="0 0 16 0" x:Name="ClearButton" Click="ClearButton_Click">Reset</Button>
             <Button Padding="8 0 8 0" Margin="0 0 8 0" x:Name="DownloadButton" Click="DownloadButton_Click">Test Plan</Button>
+            <TextBlock Margin="8 8 0 0"><Hyperlink x:Name="HowToUseLink" Click="HowToUseLink_Click">How to use</Hyperlink></TextBlock>
         </StackPanel>
         <TreeView x:Name="projectsTree" ItemsSource="{Binding Servers}" Grid.Row="1">
             <TreeView.ItemContainerStyle>

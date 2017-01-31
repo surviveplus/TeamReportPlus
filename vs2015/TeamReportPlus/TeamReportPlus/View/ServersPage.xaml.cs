@@ -108,5 +108,17 @@ namespace TeamReportPlus.View
                 } // end if
             } // end if
         }
+
+        private void HowToUseLink_Click(object sender, RoutedEventArgs e)
+        {
+            var url = "https://github.com/surviveplus/TeamReportPlus/blob/master/HowToUse/HowToUse.md";
+            try
+            {
+                System.Diagnostics.Process.Start(url);
+            }
+            catch {
+                MessageBox.Show("See : " + url);
+            }
+        }
     }
 }
