@@ -93,19 +93,28 @@ namespace TeamReportPlus.View
                 while(paser.EndOfData == false)
                 {
                     var values = paser.ReadFields();
+                    Func<int, string> getValue = (index) => {
+                        if( index < values.Length)
+                        {
+                            return values[index];
+                        }else
+                        {
+                            return null;
+                        }
+                    };
 
                     var result = new TestResultForImport {
-                        SuiteId = values[0],
-                        TestCaseId = values[1],
-                        TestCaseTitle = values[2],
-                        StepNo = values[3],
-                        Action = values[4],
-                        ExpectedResult = values[5],
-                        Outcome = values[6],
-                        Comment = values[7],
-                        Attachments = values[8],
-                        DateStarted = values[9],
-                        DateCompleted = values[10]
+                        SuiteId = getValue(0),
+                        TestCaseId = getValue(1),
+                        TestCaseTitle = getValue(2),
+                        StepNo = getValue(3),
+                        Action = getValue(4),
+                        ExpectedResult = getValue(5),
+                        Outcome = getValue(6),
+                        Comment = getValue(7),
+                        Attachments = getValue(8),
+                        DateStarted = getValue(9),
+                        DateCompleted = getValue(10)
                     };
 
                     if(result.IsHeader == false)
