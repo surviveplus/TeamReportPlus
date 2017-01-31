@@ -24,9 +24,10 @@
 1. Please wait. Test Results are shown.  Attachments are saved in desktop folder and **File Explorer** is shown. ( To cancel the download, go back to the previous page. )
 ![Test Results)](images/image5-TestResultsVS.png)
 1. Click **Copy Summary** button and **Copy Detaile** button. 
-1. Paste the TSV text  to Notepad or Excel etc...
+1. Paste the TSV text  to Notepad or Excel etc... 
 ![Sammary in Excel](images/image6-TestResultsSammaryExcel.png)
-![Detail in Excel](images/image7-TestResultsDetailExcel.png)
+![Detail in Excel](images/image7-TestResultsDetailExcel.png) 
+Download ["Sample - Test Plans & Results.xlsx"](ExcelBooks/Sample%20-%20Test%20Plans%20&%20Results.xlsx).
 
 ### Export Test Plan (Test Steps, Actions, Expected result) for offline editing
 1. Open **Test** of Visual Studio Team Services (VSTS) or Team Foundation Server(TFS) .
@@ -47,6 +48,7 @@
 1. Click **Copy for Import** button.
 1. Paste the TSV text to Excel file.
 ![Actions in Excel for Offline](images/image9-offileExcel.png)
+Download ["Sample - Export, Offline Editing & Import.xlsx"](ExcelBooks/Sample%20-%20Export,%20Offline%20Editing%20&%20Import.xlsx).
 
 ### Import Test Results and Attachments 
 1. Export Test Plan to Excel file.
