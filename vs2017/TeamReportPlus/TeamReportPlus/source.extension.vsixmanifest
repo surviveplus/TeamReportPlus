@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="TeamReportPlus.Shinichi Koga.408cfb69-3218-4cf5-93bc-25a4eb52e832" Version="1.0.7.5" Language="en-US" Publisher="Surviveplus.net" />
+    <DisplayName>TeamReportPlus for Visual Studio 2017</DisplayName>
+    <Description xml:space="preserve">Visual Studio extension to create test results reports as deliverables from Visual Studio Team Services.</Description>
+    <MoreInfo>https://github.com/surviveplus/TeamReportPlus</MoreInfo>
+    <License>LICENSE.txt</License>
+    <Icon>TeamReportPlus-32.png</Icon>
+    <PreviewImage>TeamReportPlus-200.png</PreviewImage>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    <Dependency Id="Microsoft.VisualStudio.MPF.15.0" DisplayName="Visual Studio MPF 15.0" d:Source="Installed" Version="[15.0]" />
+  </Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,16.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+  </Assets>
+</PackageManifest>
