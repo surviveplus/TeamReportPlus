@@ -29,7 +29,7 @@
 ![Detail in Excel](images/image7-TestResultsDetailExcel.png) 
 Download ["Sample - Test Plans & Results.xlsx"](ExcelBooks/Sample%20-%20Test%20Plans%20&%20Results.xlsx).
 
-### Export Test Plan (Test Steps, Actions, Expected result) for offline editing
+### Export Test Plan (Test Steps, Actions, Expected result) for offline test execution
 1. Open **Test** of Visual Studio Team Services (VSTS) or Team Foundation Server(TFS) .
 1. Add Test Suites, Test Plans, Test Cases, Test Actions and expected results.
 ![Test Suite in VSTS](images/image1-TestSuiteVSTS.png)
