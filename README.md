@@ -2,6 +2,10 @@
 # TeamReportPlus
 ![TeamReportPlus](ResourceSources/TeamReportPlus-95.png) Visual Studio extension to create test results reports as deliverables from Visual Studio Team Services.
 
+- [Download for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=SHIN-ICHIKOGA.TeamReportPlusforVisualStudio2017)
+- [Download for Visual Studio 2015](https://marketplace.visualstudio.com/items?itemName=SHIN-ICHIKOGA.TeamReportPlus)
+
+
 ## Background
 Developers wants to use modern task management system and reporting, like Visual Studio Team Services(VSTS), Team Foundation Server(TFS) and Power BI. But traditional companies wants to use traditional documents, like Excel files. Use **TeamReportPlus** to download test results from VSTS/TFS. Developers can use TFS/VSTS usually and can create traditional documents quickly later.
 
