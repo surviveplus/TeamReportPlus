@@ -2,6 +2,7 @@
 # TeamReportPlus
 ![TeamReportPlus](ResourceSources/TeamReportPlus-95.png) Visual Studio extension to create test results reports as deliverables from Visual Studio Team Services.
 
+- [Download for Visual Studio 2019](https://marketplace.visualstudio.com/items?itemName=SHIN-ICHIKOGA.TeamReportPlusforVisualStudio2019)
 - [Download for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=SHIN-ICHIKOGA.TeamReportPlusforVisualStudio2017)
 - [Download for Visual Studio 2015](https://marketplace.visualstudio.com/items?itemName=SHIN-ICHIKOGA.TeamReportPlus)
 
