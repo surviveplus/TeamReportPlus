@@ -6,11 +6,11 @@
         <Description xml:space="preserve">Visual Studio extension to create test results reports as deliverables from Visual Studio Team Services.</Description>
         <MoreInfo>https://github.com/surviveplus/TeamReportPlus</MoreInfo>
         <License>LICENSE.txt</License>
-        <Icon>TeamReportPlus-32.png</Icon>
+        <Icon>TeamReportPlus-95.png</Icon>
         <PreviewImage>TeamReportPlus-200.png</PreviewImage>
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0]" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
     </Installation>
     <Dependencies>
         <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
