@@ -7,10 +7,11 @@
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="600"
       Title="TestResultsPage"
+    Style="{DynamicResource ResourceKey=PageStyle}"
       Loaded="Page_Loaded"
       >
     <Page.Resources>
-        <ResourceDictionary Source="Styles.xaml" />
+        <ResourceDictionary Source="Styles\Styles.xaml" />
     </Page.Resources>
 
     <Grid>

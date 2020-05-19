@@ -8,10 +8,11 @@
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="ServersPage"
+    Style="{DynamicResource ResourceKey=PageStyle}"
       Loaded="Page_Loaded">
 
     <Page.Resources>
-        <ResourceDictionary Source="Styles.xaml" />
+        <ResourceDictionary Source="Styles\Styles.xaml" />
     </Page.Resources>
 
 

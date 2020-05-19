@@ -6,9 +6,10 @@
       xmlns:local="clr-namespace:TeamReportPlus.View"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
+    Style="{DynamicResource ResourceKey=PageStyle}"
       Title="TestResultsDetailPage" Loaded="Page_Loaded">
     <Page.Resources>
-        <ResourceDictionary Source="Styles.xaml" />
+        <ResourceDictionary Source="Styles\Styles.xaml" />
     </Page.Resources>
 
     <Grid>
