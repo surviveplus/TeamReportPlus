@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="TeamReportPlus.Shinichi Koga.147CB494-10E1-4625-90E3-5ED113F4806B" Version="1.0.7.5" Language="en-US" Publisher="SHIN-ICHI KOGA" />
+        <Identity Id="TeamReportPlus.Shinichi Koga.147CB494-10E1-4625-90E3-5ED113F4806B" Version="1.0.8.6" Language="en-US" Publisher="SHIN-ICHI KOGA" />
         <DisplayName>TeamReportPlus for Visual Studio 2019</DisplayName>
         <Description xml:space="preserve">Visual Studio extension to create test results reports as deliverables from Visual Studio Team Services.</Description>
         <MoreInfo>https://github.com/surviveplus/TeamReportPlus</MoreInfo>
